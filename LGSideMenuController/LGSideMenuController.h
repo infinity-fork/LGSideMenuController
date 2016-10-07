@@ -252,6 +252,7 @@ typedef NS_ENUM(NSUInteger, LGSideMenuSwipeGestureArea)
 - (void)leftViewWillLayoutSubviewsWithSize:(CGSize)size;
 - (void)rightViewWillLayoutSubviewsWithSize:(CGSize)size;
 
+- (void)presentViewControllerFromMenu;
 - (void)showLeftViewAnimated:(BOOL)animated completionHandler:(void(^)())completionHandler;
 - (void)hideLeftViewAnimated:(BOOL)animated completionHandler:(void(^)())completionHandler;
 - (void)showHideLeftViewAnimated:(BOOL)animated completionHandler:(void(^)())completionHandler;
