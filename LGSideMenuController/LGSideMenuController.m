@@ -1378,6 +1378,22 @@
     }
 }
 
+- (void)presentViewControllerFromMenu {
+    
+    _leftViewShowing = NO;
+    
+    _currentPreferredStatusBarHidden = NO;
+    _currentPreferredStatusBarStyle = _savedStatusBarStyle;
+    
+    _waitingForUpdateStatusBar = YES;
+    
+    [self statusBarAppearanceUpdate];
+    [self setNeedsStatusBarAppearanceUpdate];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kLGSideMenuControllerDidDismissLeftViewNotification object:self userInfo:nil];
+
+}
+
 - (void)hideLeftViewAnimated:(BOOL)animated completionHandler:(void(^)())completionHandler
 {
     if (!kLGSideMenuIsLeftViewAlwaysVisible && self.isLeftViewShowing)
