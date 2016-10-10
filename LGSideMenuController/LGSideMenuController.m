@@ -1380,7 +1380,7 @@
 
 - (void)presentViewControllerFromMenu {
     
-    _leftViewShowing = NO;
+    _leftViewShowing = YES;
     
     _currentPreferredStatusBarHidden = NO;
     _currentPreferredStatusBarStyle = _savedStatusBarStyle;
